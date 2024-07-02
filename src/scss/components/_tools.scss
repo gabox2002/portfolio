@@ -1,0 +1,71 @@
+.tools-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .fa-icon-container {
+    width: 3em; 
+    height: 3em; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .fa-icon {
+    font-size: 3em; 
+    color: #888; 
+    transition: color 0.3s, transform 0.3s; 
+
+    position: relative; 
+
+    &:hover {
+      color: currentColor; 
+      transform: scale(1.1); 
+    }
+
+    /* Estilos específicos para Python */
+    &.fa-python {
+      &:hover {
+        color: transparent; 
+        background-image: url('https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        background-position: center top 4px; 
+      }
+    }
+    /* Estilos específicos para Node.js */
+    &.fa-node:hover {
+        color: transparent; 
+        background-image: url('https://nodejs.org/static/logos/nodejsStackedDark.svg'); 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        background-position: center; 
+    }
+
+    /* Estilos para otros iconos (HTML5, CSS3, Sass, JS, React, etc.) */
+    &.fa-js:hover {
+      color: #f7df1e; 
+    }
+
+    &.fa-html5:hover {
+      color: #e34f26; 
+    }
+
+    &.fa-css3-alt:hover {
+      color: #1572b6; 
+    }
+
+    &.fa-sass:hover {
+      color: #cc6699; 
+    }
+
+    &.fa-react:hover {
+      color: #61dafb; 
+    }
+
+    &.fa-github:hover {
+      color: #333; 
+    }
+  }
+}

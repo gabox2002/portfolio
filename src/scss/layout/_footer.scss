@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    color: white;
+    text-align: center;
+  
+    margin-left: 250px; 
+    width: calc(100% - 250px); 
+  
+    @media (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    &-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+  
+      a {
+        color: white;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
