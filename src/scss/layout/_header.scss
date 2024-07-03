@@ -3,19 +3,19 @@
 .header {
   background-color: $primary-color;
   color: white;
-  width: 100%; 
-  max-width: 250px; 
-  height: 100vh; 
-  position: fixed; 
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0;
+  padding: 0;
   text-align: center;
   z-index: 10;
-  transform: translateX(0); 
+  transform: translateX(0);
 
   .header-content {
     width: 100%;
@@ -29,6 +29,8 @@
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
+    object-fit: cover;
+    object-position: center;
   }
 
   h1 {
@@ -54,17 +56,16 @@
   }
 
   .footer-icons {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
 
-    p {
-      margin: 10px 0;
-      a {
-        color: white;
-        text-decoration: none;
-      }
+    .fa-icon {
+      font-size: 1.2em;
+      width: 40px; 
+      text-align: center;
     }
   }
 
@@ -79,30 +80,37 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 30px; 
+    margin-top: 20px;
 
     li {
       margin-bottom: 10px;
     }
-  
+
     a {
       color: white;
       text-decoration: none;
       display: flex;
       align-items: center;
       padding: 10px 0;
-      padding-left: 40px; 
-
-      p {
-        margin-left: 8px; 
+      padding-left: 30px; 
+      
+      .fa-icon {
+        font-size: 1.2em;
+        width: 40px; 
+        text-align: center;
       }
-  
+      
+      p {
+        margin-left: 5px;
+        text-align: left; 
+        width: 100%; 
+      }
+
       &:hover {
         text-decoration: none;
       }
     }
   }
-  
 }
 
 .hamburger {
@@ -113,25 +121,25 @@
   color: white;
   cursor: pointer;
   position: fixed;
-  right: 50px; 
+  right: 50px;
   top: 50px;
-  z-index: 11; 
+  z-index: 11;
 
   @media (max-width: 768px) {
-    display: block; 
+    display: block;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 
     &.open {
-      transform: translateX(0); 
+      transform: translateX(0);
     }
 
     &.closed {
-      transform: translateX(-100%); 
+      transform: translateX(-100%);
     }
 
     .header-content {
@@ -142,8 +150,6 @@
 
     .navbar {
       .nav-links {
-      
-
         &.open {
           display: flex;
         }

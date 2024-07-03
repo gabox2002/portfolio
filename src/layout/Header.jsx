@@ -37,7 +37,7 @@ function Header() {
 
   const handleNavLinkClick = () => {
     if (window.innerWidth <= 768) {
-      setIsMenuOpen(false); // Ocultar el menú después de hacer clic en un enlace en dispositivos móviles
+      setIsMenuOpen(false); 
     }
   };
 
@@ -69,12 +69,7 @@ function Header() {
                   <p>About</p>
                 </a>
               </li>
-              <li>
-                <a href="#experience" onClick={handleNavLinkClick}>
-                  <Icon icon={faGraduationCap} className="menu-icon" /> 
-                  <p>Experience</p>
-                </a>
-              </li>
+              
               <li>
                 <a href="#education" onClick={handleNavLinkClick}>
                   <Icon icon={faBook} className="menu-icon" /> 
@@ -85,6 +80,12 @@ function Header() {
                 <a href="#projects" onClick={handleNavLinkClick}>
                   <Icon icon={faProjectDiagram} className="menu-icon" /> 
                   <p>Projects</p>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" onClick={handleNavLinkClick}>
+                  <Icon icon={faGraduationCap} className="menu-icon" /> 
+                  <p>Experience</p>
                 </a>
               </li>
               <li>
