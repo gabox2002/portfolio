@@ -4,41 +4,51 @@ import Icon from "./Icon"
 
 export default function Button({
     label,
-    icon = "",
+    icon = null,
     action = () => {},
-    className,
+    className = "",
     type = "button",
-    disabled,
-    title,
-    to,
-    href, // Añadir prop href para enlaces externos
-}) {
+    disabled = false,
+    title = "",
+    to = null,
+    href = null,
+    download = false, 
+    isDarkMode 
+  }) {
     if (href) {
-        return (
-            <a href={href} className={className} title={title} target="_blank" rel="noopener noreferrer">
-                {icon ? <Icon icon={icon} /> : undefined}
-                {label}
-            </a>
-        );
+      return (
+        <a
+          href={href}
+          className={className}
+          title={title}
+          target="_blank"
+          rel="noopener noreferrer"
+          download={download ? true : undefined} 
+        >
+          {icon && <Icon icon={icon} />} 
+          {label}
+        </a>
+      );
     } else if (to) {
-        return (
-            <Link to={to} className={className} title={title}>
-                {icon ? <Icon icon={icon} /> : undefined}
-                {label}
-            </Link>
-        );
+      return (
+        <Link to={to} className={className} title={title}>
+          {icon && <Icon icon={icon} />}
+          {label} 
+        </Link>
+      );
     } else {
-        return (
-            <button
-                type={type}
-                className={className}
-                onClick={action}
-                title={title}
-                disabled={disabled}
-            >
-                {icon ? <Icon icon={icon} /> : undefined}
-                {label}
-            </button>
-        );
+      return (
+        <button
+          type={type}
+          className={className}
+          onClick={action}
+          title={title}
+          disabled={disabled}
+        >
+          {icon && <Icon icon={icon} />} 
+          {label === 'dark' ? (isDarkMode ? 'light' : 'dark') : label}
+        </button>
+      );
     }
-}
+  }
+  
