@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faGraduationCap, faBook, faProjectDiagram, faEnvelope, faBars, faTimes, faFilePdf, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
-import profileImage from '../assets/images/profile.jpg'
+import profileImage from '../assets/images/profile/profile.jpg'
 import Button from "../components/Button"
 import Icon from "../components/Icon"
 import '../scss/layout/_header.scss'
-import resume from '../assets/documents/resume.pdf'
+import resume from '../assets/documents/cv_gabrielquispe.pdf'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

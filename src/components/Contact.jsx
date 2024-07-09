@@ -21,6 +21,7 @@ function Contact() {
                 <Button href="mailto:gabox2002@gmail.com" icon={faEnvelope}/>
                 <Button href="https://github.com/gabox2002" icon={faGithub} />
                 <Button href="https://linkedin.com/in/gabox2002" icon={faLinkedin} />
+                <Button href="https://discordapp.com/users/gabriel.quispe" icon={faLinkedin} />
             </div>
 
         <form className="contact-form" onSubmit={handleSubmit} action="https://formspree.io/f/mldrebpe" method="POST">
